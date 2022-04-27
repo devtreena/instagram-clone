@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import NewPost from "./pages/newPost/NewPost";
+import Register from "./pages/register/Register";
+import Inboxs from "./pages/inboxs/Inboxs";
+import Stories from "./pages/stories/Stories";
+import Notice from "./pages/notice/Notice";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Setting from "./pages/settings/Setting";
+import Feed from "./components/feed/Feed";
 
-function App() {
+const App = () => {
+  const user = true;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={user ? <Home /> : <Login />}>
+          <Route path="/" element={<Feed />} />
+          <Route path="/inboxs" element={<Inboxs />} />
+          <Route path="/newPost" element={<NewPost />} />
+          <Route path="/stories" element={<Stories />} />
+          <Route path="/settings" element={<Setting />} />
+        </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

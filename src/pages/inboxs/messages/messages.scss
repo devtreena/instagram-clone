@@ -1,0 +1,125 @@
+.messages {
+  .messagesContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .messagesIcon {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 46px;
+      cursor: pointer;
+    }
+
+    span {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    p {
+      color: gray;
+      font-size: 14px;
+    }
+
+    .messagesButton {
+      border: none;
+      background: blue;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+  }
+
+  .messagesWithFriend {
+    .messagesHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+
+      .messagesInfo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .messagesImg {
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            margin-right: 12px;
+          }
+        }
+
+        .messagesName {
+          display: flex;
+          flex-direction: column;
+          .name {
+            font-weight: 600;
+          }
+
+          .messagesAgo {
+            color: gray;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .messagesNotice {
+        font-size: 26px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .messagesHr {
+    width: 100%;
+    height: 0.2px;
+    background-color: #c8c8c8;
+  }
+
+  .messagesWrite {
+      padding: 30px;
+      
+    .messagesSend {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      border: 0.2px solid #c8c8c8;
+      border-radius: 30px;
+
+      .messagesInput {
+        .messagesSmile {
+          font-size: 26px;
+          margin-right: 10px;
+        }
+        input {
+          outline: none;
+          border: none;
+          background-color: transparent;
+        }
+      }
+
+      .messagesPush {
+        color: blue;
+        margin-right: 4px;
+        cursor: pointer;
+      }
+
+      .messagesReact{
+          font-size: 26px;
+          cursor: pointer;
+      }
+    }
+  }
+}

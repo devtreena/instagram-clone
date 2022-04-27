@@ -1,0 +1,98 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 0.1px solid #cbc8c8;
+  margin: 12px 0;
+  border-radius: 3px;
+
+  .postInfo {
+    display: flex;
+    padding: 18px;
+
+    .postAvatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    span {
+      font-weight: 600;
+      margin-left: 18px;
+      cursor: pointer;
+    }
+  }
+
+  .postImg {
+    img {
+      width: 100%;
+      height: 90vh;
+      object-fit: cover;
+    }
+  }
+
+  .postReactions {
+    padding: 15px;
+    .postReact {
+      .postIcons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .iconsReaction {
+          font-size: 26px;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+
+        .iconsMark {
+          font-size: 26px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .postLikes {
+      font-size: 15px;
+      margin-top: 4px;
+    }
+
+    .postTimeago span {
+      color: grey;
+      font-size: 12px;
+    }
+  }
+
+  .postHr {
+    width: 100%;
+    height: 0.2px;
+    background-color: #cbc8c8;
+  }
+
+  .postComments {
+    .postComment {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+
+      .commentInput {
+        .commentIcon {
+          font-size: 26px;
+        }
+        input {
+          padding: 6px 8px;
+          outline: none;
+          border: none;
+          background-color: transparent;
+        }
+      }
+
+      .commentPush {
+        color: blue;
+        margin-right: 4px;
+      }
+    }
+  }
+}
